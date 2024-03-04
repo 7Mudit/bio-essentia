@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,10 +10,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { sidebarLinks } from "@/constants";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 const NavContent = () => {
   const pathname = usePathname();
@@ -53,7 +54,7 @@ export default function Sidebar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <RxHamburgerMenu className="w-5 h-5" />
+        <Menu className="w-5 h-5" />
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader>

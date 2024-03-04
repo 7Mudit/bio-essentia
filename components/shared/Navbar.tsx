@@ -5,15 +5,12 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { navSchema } from "@/schemas";
 import { Button } from "@/components/ui/button";
-import { RxHamburgerMenu } from "react-icons/rx";
 import Sidebar from "./Sidebar";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";

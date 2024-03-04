@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { Noto_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
 const noto_sans = Noto_Sans({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {

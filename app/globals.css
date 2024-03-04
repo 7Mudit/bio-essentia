@@ -94,3 +94,47 @@
   }
 
 }
+
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Rounded corners of the scrollbar thumb */
+}
+
+/* For Internet Explorer, Edge */
+::-ms-scrollbar {
+  width: 10px;
+  /* Adjust the width of the scrollbar */
+}
+
+::-ms-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the tracking area */
+}
+
+::-ms-scrollbar-thumb {
+  background: #000000;
+  /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Rounded corners of the scrollbar thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  /* "auto" or "thin" */
+  scrollbar-color: #000000 #f1f1f1;
+  /* thumb and track color */
+}

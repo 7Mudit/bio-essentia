@@ -6,6 +6,7 @@ import { z } from "zod";
 import { navSchema } from "@/schemas";
 import { Button } from "@/components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Sidebar from "./Sidebar";
 import {
   Form,
   FormControl,
@@ -319,7 +320,8 @@ const Navbar = () => {
         <div className="flex flex-row   md:hidden    items-center justify-between">
           {/* side bar and logo */}
           <div className="flex flex-row  gap-3 items-center justify-center">
-            <RxHamburgerMenu className="w-5 h-5" />
+            {/* <RxHamburgerMenu className="w-5 h-5" /> */}
+            <Sidebar />
             {/* mobile logo */}
             <svg
               xmlns="http://www.w3.org/2000/svg"

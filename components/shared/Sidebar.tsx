@@ -58,7 +58,7 @@ export default function Sidebar() {
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader>
-          <SheetTitle>BioEssentials</SheetTitle>
+          <SheetTitle>BioEssential</SheetTitle>
         </SheetHeader>
         <NavContent />
         <SheetFooter>

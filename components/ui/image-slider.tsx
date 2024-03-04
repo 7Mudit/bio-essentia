@@ -38,6 +38,7 @@ export const ImagesSlider = ({
 
   useEffect(() => {
     loadImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadImages = () => {
@@ -81,6 +82,7 @@ export const ImagesSlider = ({
       window.removeEventListener("keydown", handleKeyDown);
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {}, []);
@@ -142,6 +144,7 @@ export const ImagesSlider = ({
             src={loadedImages[currentIndex]}
             initial="initial"
             animate="visible"
+            alt="Random Image"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
             className="image h-full w-full absolute inset-0 object-cover object-center"

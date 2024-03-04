@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { Noto_Sans } from "next/font/google";
+import Footer from "@/components/shared/Footer";
 
 const noto_sans = Noto_Sans({ subsets: ["cyrillic"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${noto_sans.className}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

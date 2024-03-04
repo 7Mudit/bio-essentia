@@ -13,7 +13,7 @@ const Page = () => {
       {/* Scroll hero */}
       <ScrollHero />
       {/* image slider compoenent */}
-      <div className="px-2 ">
+      <div className=" ">
         <HeroSlider />
       </div>
     </div>

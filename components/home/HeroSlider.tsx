@@ -14,10 +14,7 @@ export default function HeroSlider() {
     "/assets/images/img4.webp",
   ];
   return (
-    <ImagesSlider
-      className="h-[40rem] rounded-lg shadow-xl shadow-black"
-      images={images}
-    >
+    <ImagesSlider className="h-[40rem] shadow-xl shadow-black" images={images}>
       <motion.div
         initial={{
           opacity: 0,

@@ -14,12 +14,12 @@ const words = [
 
 export default function ScrollHero() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden ">
       <ContainerScroll
         users={users}
         titleComponent={
           <>
-            <h1 className="text-2xl  font-extrabold sm:text-4xl  text-black dark:text-white">
+            <h1 className="text-xl xs:text-3xl   sm:text-5xl font-extrabold   text-black dark:text-white">
               Elevate your well being <br />
               <TypewriterEffectSmooth words={words} />
             </h1>{" "}

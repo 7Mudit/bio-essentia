@@ -9,65 +9,17 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const products = [
-  {
-    id: 1,
-    img: "/assets/images/jordans.webp",
-    name: "1 Air Jordan 4 Retro Reimagined",
-    desc: "The Air Jordan 4 Retro Reimagined Bred will release on Saturday,February 17, 2024. Your best opportunity to get these right now is byentering raffles and waiting for the official releases.",
-    prize: "₹100",
-    prizeStrike: "₹150",
-    discountPrize: "₹50",
-  },
-  {
-    id: 2,
-    img: "/assets/images/jordans.webp",
-    name: "2 Air Jordan 4 Retro Reimagined",
-    desc: "The Air Jordan 4 Retro Reimagined Bred will release on Saturday,February 17, 2024. Your best opportunity to get these right now is byentering raffles and waiting for the official releases.",
-    prize: "₹100",
-    prizeStrike: "₹150",
-    discountPrize: "₹50",
-  },
-  {
-    id: 3,
-    img: "/assets/images/jordans.webp",
-    name: "3 Air Jordan 4 Retro Reimagined",
-    desc: "The Air Jordan 4 Retro Reimagined Bred will release on Saturday,February 17, 2024. Your best opportunity to get these right now is byentering raffles and waiting for the official releases.",
-    prize: "₹100",
-    prizeStrike: "₹150",
-    discountPrize: "₹50",
-  },
-  {
-    id: 4,
-    img: "/assets/images/jordans.webp",
-    name: "4 Air Jordan 4 Retro Reimagined",
-    desc: "The Air Jordan 4 Retro Reimagined Bred will release on Saturday,February 17, 2024. Your best opportunity to get these right now is byentering raffles and waiting for the official releases.",
-    prize: "₹100",
-    prizeStrike: "₹150",
-    discountPrize: "₹50",
-  },
-  {
-    id: 5,
-    img: "/assets/images/jordans.webp",
-    name: "5 Air Jordan 4 Retro Reimagined",
-    desc: "The Air Jordan 4 Retro Reimagined Bred will release on Saturday,February 17, 2024. Your best opportunity to get these right now is byentering raffles and waiting for the official releases.",
-    prize: "₹100",
-    prizeStrike: "₹150",
-    discountPrize: "₹50",
-  },
-];
-
-export default function Products() {
+export default function Products({ heading, products }: any) {
   return (
-    <div className="flex relative flex-col py-[150px] sm:px-10 px-4  gap-10 items-start justify-center">
-      <h1 className="text-[40px] font-bold ">Products</h1>
+    <div className="flex relative flex-col pb-[150px] px-4 lg:px-10 gap-10 items-start justify-center">
+      <h1 className="text-[40px] font-bold ">{heading}</h1>
       {/* <div className="flex flex-row flex-wrap gap-10 items-center justify-center"> */}
       <Carousel
         opts={{ loop: true, align: "start" }}
-        className="max-w-[78vw]  sm:max-w-[90vw] sm:px-4"
+        className="max-w-[75vw]  sm:max-w-[90vw] sm:px-4"
       >
-        <CarouselContent className="-ml-1  gap-10">
-          {products.map((product, index) => (
+        <CarouselContent className="   gap-5">
+          {products.map((product: any, index: any) => (
             <CarouselItem key={index} className="max-w-[384px] cursor-pointer">
               <Product {...product} />
             </CarouselItem>

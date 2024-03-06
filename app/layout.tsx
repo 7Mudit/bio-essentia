@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${noto_sans.className}`}>
+      <body className={`${noto_sans.className} `}>
         <Navbar />
         {children}
         <Footer />

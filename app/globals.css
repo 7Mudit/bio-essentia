@@ -95,6 +95,10 @@
 
 }
 
+body {
+  user-select: none;
+}
+
 /* For Chrome, Safari, and Opera */
 ::-webkit-scrollbar {
   width: 10px;

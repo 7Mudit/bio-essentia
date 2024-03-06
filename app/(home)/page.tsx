@@ -12,6 +12,7 @@ import {
   trendingProducts,
 } from "@/constants";
 import NewsLetter from "@/components/home/NewsLetter";
+import Category from "@/components/home/Category";
 
 const Page = () => {
   return (
@@ -24,8 +25,11 @@ const Page = () => {
       {/* <TryHero /> */}
       {/* Scroll hero */}
       <ScrollHero />
-
       <div className="-mt-40">
+        <Category />
+      </div>
+
+      <div>
         <Products products={popularProducts} heading="Popular Products" />
       </div>
       <div className="">

@@ -304,3 +304,16 @@ export const fitnessBudgetStacks = [
     newPro: true,
   },
 ];
+
+// Mock data for categories
+export const categoryData = [
+  { title: "Vitamins", img: "/assets/images/supplement.webp" },
+  { title: "Proteins", img: "/assets/images/supplement.webp" },
+  { title: "Minerals", img: "/assets/images/supplement.webp" },
+  { title: "Herbs", img: "/assets/images/supplement.webp" },
+  { title: "Vitamins", img: "/assets/images/supplement.webp" },
+  { title: "Proteins", img: "/assets/images/supplement.webp" },
+  { title: "Minerals", img: "/assets/images/supplement.webp" },
+  { title: "Herbs", img: "/assets/images/supplement.webp" },
+  // Add more categories as needed
+];

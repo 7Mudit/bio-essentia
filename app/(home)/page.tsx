@@ -22,9 +22,10 @@ const Page = () => {
         <NavMenu />
       </div>
 
-      {/* <TryHero /> */}
-      {/* Scroll hero */}
-      <ScrollHero />
+      <div>
+        <ScrollHero />
+      </div>
+
       <div className="-mt-40">
         <Category />
       </div>

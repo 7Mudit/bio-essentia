@@ -6,6 +6,7 @@ import { z } from "zod";
 import { navSchema } from "@/schemas";
 import { Button } from "@/components/ui/button";
 import Sidebar from "./Sidebar";
+
 import {
   Form,
   FormControl,
@@ -14,6 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { SignUpButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const form = useForm<z.infer<typeof navSchema>>({
@@ -304,12 +307,16 @@ const Navbar = () => {
             </div>
 
             {/* button */}
-            <Button
-              className="bg-[#ffbe00] hover:bg-[#ffbe00] px-7 duration-300 transition-all hover:scale-105 text-black font-bold"
-              variant="default"
-            >
-              Login/Sign Up
-            </Button>
+            <SignUpButton mode="modal">
+              {/* <Link href="/sign-up"> */}
+              <Button
+                variant={"outline"}
+                className="px-6 py-2  border border-blue-500 text-blue-500 rounded-md shadow-sm hover:bg-blue-500 hover:text-white transition-colors duration-300"
+              >
+                Login/Sign Up
+              </Button>
+            </SignUpButton>
+            {/* </Link> */}
           </div>
         </div>
 

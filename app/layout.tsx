@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
+
 import { Noto_Sans } from "next/font/google";
-import Footer from "@/components/shared/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark, neobrutalism } from "@clerk/themes";
 
 const noto_sans = Noto_Sans({ subsets: ["cyrillic"] });
 
@@ -19,9 +20,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${noto_sans.className} `}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ClerkProvider
+          appearance={{
+            elements: {
+              formButtonPrimary:
+                "px-6 py-2 bg-black  text-white rounded-md shadow-sm hover:bg-blue-500 hover:text-white transition-colors duration-300",
+            },
+            variables: { colorPrimary: "black" },
+          }}
+        >
+          {children}{" "}
+        </ClerkProvider>
       </body>
     </html>
   );

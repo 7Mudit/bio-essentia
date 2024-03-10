@@ -15,7 +15,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 import { SignUpButton, SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
@@ -30,6 +29,7 @@ const Navbar = () => {
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+
   return (
     <>
       <div
@@ -316,6 +316,7 @@ const Navbar = () => {
                 Login/Sign Up
               </Button>
             </SignUpButton>
+
             <SignedIn>
               <UserButton
                 appearance={{

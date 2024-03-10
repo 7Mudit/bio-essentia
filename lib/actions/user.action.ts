@@ -1,7 +1,7 @@
+"use server";
 import User from "@/database/user.model";
 import { connectToDb } from "../mongoose";
 import { revalidatePath } from "next/cache";
-import path from "path";
 
 export async function createUser(userData: any) {
   try {

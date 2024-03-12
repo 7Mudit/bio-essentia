@@ -8,8 +8,9 @@ import { Label } from "@/components/ui/label";
 import Products from "@/components/home/Products";
 import { popularProducts } from "@/constants";
 import { Button } from "@/components/ui/button";
-import { TiStarFullOutline, TiStarOutline } from "react-icons/ti";
-import { Textarea } from "@/components/ui/textarea";
+
+import { useAuth } from "@clerk/nextjs";
+import CheckAddressModal from "@/components/product/CheckAddressModal";
 
 interface ProductData {
   images: string[];
@@ -24,7 +25,7 @@ interface ProductData {
 
 const productData: ProductData = {
   images: [
-    "/assets/images/product/Product1.png",
+    "/assets/images/supplement.webp",
     "/assets/images/product/product2.jpg",
     "/assets/images/product/Product3.webp",
     "/assets/images/product/product2.jpg",
@@ -42,6 +43,8 @@ const productData: ProductData = {
 };
 
 const Page = () => {
+  const { userId } = useAuth();
+
   const [mainImage, setMainImage] = useState(productData.images[0]);
   const [quantity, setQuantity] = useState(1);
 
@@ -70,23 +73,23 @@ const Page = () => {
   return (
     <>
       <div className="flex flex-col items-start justify-center py-10 gap-10 p-2 sm:p-4 md:p-8 lg:p-12 xl:p-14">
-        <div className="flex flex-col xl:flex-row justify-center gap-10 items-start ">
+        <div className="flex flex-col lg:flex-row justify-center gap-10 items-start ">
           <div className="flex-1 flex flex-col">
-            <div className="p-2 border border-black rounded-lg">
+            <div className="p-2 border border-gray-300 rounded-xl">
               <Image
                 src={mainImage}
-                width={500}
+                width={530}
                 height={530}
                 alt="Main"
-                className="w-full object-contain h-[530px]"
+                className="w-full object-cover h-[530px]"
               />
             </div>
 
-            <div className="flex border  border-black rounded-lg justify-center mt-2">
+            <div className="flex border  border-gray-400 rounded-lg justify-center mt-2">
               {productData.images.map((image, index) => (
                 <div
                   key={index}
-                  className="border-r-[1px] border-black  last:border-none"
+                  className="border-r-[1px] border-gray-400  last:border-none"
                 >
                   <Image
                     src={image}
@@ -145,10 +148,8 @@ const Page = () => {
             <Button className="mt-4 mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Add to Cart
             </Button>
-            <Button className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              Buy Now
-            </Button>
-            <div className="mt-4 flex flex-col gap-2 items-start justify-center">
+            <CheckAddressModal />
+            {/* <div className="mt-4 flex flex-col gap-2 items-start justify-center">
               <div className="w-full">
                 <h1 className="text-[18px] text-[#253D4E] font-semibold">
                   Add a Review
@@ -172,10 +173,7 @@ const Page = () => {
                   </button>
                 ))}
               </div>
-              {/* Optionally display the selected rating using RatingStars
-              {rating > 0 && (
-                <RatingStars Review_Count={rating} Star_Size={24} />
-              )} */}
+
               <Textarea
                 className="border border-gray-300 p-2"
                 rows={4}
@@ -190,7 +188,7 @@ const Page = () => {
               >
                 Submit Review
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
 

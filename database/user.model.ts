@@ -8,6 +8,7 @@ export interface IUser extends Document {
   password?: string;
   picture: string;
   joinedAt: Date;
+  addresses: Schema.Types.ObjectId[];
 }
 
 const UserSchema = new Schema({
@@ -19,6 +20,7 @@ const UserSchema = new Schema({
   picture: { type: String, required: true },
   location: { type: String },
   joinedAt: { type: Date, default: Date.now },
+  addresses: [{ type: Schema.Types.ObjectId, ref: "Address" }],
 });
 
 const User = models.User || model("User", UserSchema); // Corrected model name

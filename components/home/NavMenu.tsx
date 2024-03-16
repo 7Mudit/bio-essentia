@@ -58,7 +58,9 @@ export default function NavMenu() {
     <NavigationMenu className="mx-auto">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>ALL PRODUCTS</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="!font-medium !text-md">
+            Products
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -94,14 +96,21 @@ export default function NavMenu() {
 
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              OFFERS
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "!font-medium !text-md"
+              )}
+            >
+              Offers
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>STORES</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="!font-medium !text-md">
+            Stores
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -119,16 +128,26 @@ export default function NavMenu() {
 
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              OUR STORY
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "!font-medium !text-md"
+              )}
+            >
+              Our Story
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              CHAT SUPPORT
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "!font-medium !text-md"
+              )}
+            >
+              Support
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -18,9 +18,9 @@ const Page = () => {
   return (
     <div className="w-full  h-full flex flex-col">
       {/* navigation menu for big screens only */}
-      <div className="md:block w-full  py-[20px] min-h-[90px]  hidden">
+      {/* <div className="md:block w-full  py-[20px] min-h-[90px]  hidden">
         <NavMenu />
-      </div>
+      </div> */}
 
       <div>
         <ScrollHero />

@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const form = useForm<z.infer<typeof navSchema>>({
@@ -42,7 +43,13 @@ const Navbar = () => {
           {/* logo */}
           <div>
             <Link href="/">
-              <svg
+              <Image
+                src="/assets/icons/new-logo.svg"
+                alt="new logo"
+                width={150}
+                height={150}
+              />
+              {/* <svg
                 className="header-top__logo "
                 xmlns="http://www.w3.org/2000/svg"
                 width="63.519"
@@ -170,7 +177,7 @@ const Navbar = () => {
                     </g>
                   </g>
                 </g>
-              </svg>
+              </svg> */}
             </Link>
           </div>
           {/* search bar */}

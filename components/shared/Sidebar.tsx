@@ -14,6 +14,8 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CiMenuBurger, CiMenuFries } from "react-icons/ci";
+import { TiThMenu } from "react-icons/ti";
 
 const NavContent = () => {
   const pathname = usePathname();
@@ -54,7 +56,7 @@ export default function Sidebar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Menu className="w-5 h-5" />
+        <TiThMenu className="w-5 h-5" />
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader>

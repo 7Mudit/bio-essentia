@@ -15,6 +15,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuBurger, CiMenuFries } from "react-icons/ci";
+import {
+  RiMenu3Fill,
+  RiMenu5Line,
+  RiMenuAddLine,
+  RiMenuFoldLine,
+  RiMenuUnfoldFill,
+} from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
 
 const NavContent = () => {
@@ -56,7 +63,7 @@ export default function Sidebar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <TiThMenu className="w-5 h-5" />
+        <RiMenu3Fill className="w-5 h-5" />
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader>

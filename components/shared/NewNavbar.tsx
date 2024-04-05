@@ -1,16 +1,52 @@
+// "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import NavMenu from "../home/NavMenu";
 import { SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { CiShoppingCart } from "react-icons/ci";
-import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
-import { ShoppingBasket, ShoppingCart, User } from "lucide-react";
+import { ShoppingCart, User } from "lucide-react";
+// import {
+//   motion,
+//   AnimatePresence,
+//   useScroll,
+//   useMotionValueEvent,
+// } from "framer-motion";
 
 const NewNavbar = () => {
+  // const { scrollYProgress } = useScroll();
+
+  // const [visible, setVisible] = useState(true);
+
+  // useMotionValueEvent(scrollYProgress, "change", (current) => {
+  //   // Check if current is not undefined and is a number
+  //   if (typeof current === "number") {
+  //     let direction = current! - scrollYProgress.getPrevious()!;
+  //     const nearTop = scrollYProgress.get() < 0.05;
+  //     if (nearTop || direction < 0) {
+  //       setVisible(true);
+  //     } else {
+  //       setVisible(false);
+  //     }
+  //   }
+  // });
   return (
-    <div className="flex sticky top-0 z-[50]  flex-row h-[72px] bg-white   shadow-lg items-center justify-between px-3 sm:px-10">
+    // <AnimatePresence mode="wait">
+    //   <motion.div
+    //     className="flex sticky top-0 z-[50]  flex-row h-[72px] bg-white   shadow-lg items-center  justify-between px-3 sm:px-10"
+    //     initial={{
+    //       opacity: 1,
+    //       y: -100,
+    //     }}
+    //     animate={{
+    //       y: visible ? 0 : -100,
+    //       opacity: visible ? 1 : 0,
+    //     }}
+    //     transition={{
+    //       duration: 0.2,
+    //     }}
+    // >
+    <div className="flex relative top-0  flex-row h-[72px] bg-white   shadow-lg items-center  justify-between px-3 sm:px-10">
       <div className="flex items-center justify-center  flex-row gap-2">
         <div className="lg:hidden">
           <Sidebar />
@@ -36,7 +72,9 @@ const NewNavbar = () => {
         {/* button */}
         <SignedOut>
           <SignUpButton mode="modal">
-            <User color="black" size={24} />
+            <div className="relative duration-300 hover:scale-105 transition-all cursor-pointer">
+              <User color="black" size={24} />
+            </div>
           </SignUpButton>
         </SignedOut>
 
@@ -55,6 +93,8 @@ const NewNavbar = () => {
         </SignedIn>
       </div>
     </div>
+    // </motion.div>
+    // </AnimatePresence>
   );
 };
 

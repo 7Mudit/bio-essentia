@@ -13,49 +13,52 @@ import {
 } from "@/constants";
 import NewsLetter from "@/components/home/NewsLetter";
 import Category from "@/components/home/Category";
+import ConstructionBanner from "@/components/Banner";
 
 const Page = () => {
   return (
-    <div className="w-full  h-full flex flex-col">
-      {/* navigation menu for big screens only */}
-      {/* <div className="md:block w-full  py-[20px] min-h-[90px]  hidden">
+    <>
+      <div className="w-full  h-full flex flex-col">
+        {/* navigation menu for big screens only */}
+        {/* <div className="md:block w-full  py-[20px] min-h-[90px]  hidden">
         <NavMenu />
       </div> */}
 
-      <div>
-        <ScrollHero />
-      </div>
+        <div>
+          <ScrollHero />
+        </div>
 
-      <div className="-mt-40">
-        <Category />
-      </div>
+        <div className="-mt-40">
+          <Category />
+        </div>
 
-      <div>
-        <Products products={popularProducts} heading="Popular Products" />
-      </div>
-      <div className="">
-        <Products products={trendingProducts} heading="Trending" />
-      </div>
-      <div className="">
-        <Products
-          products={fitnessBudgetStacks}
-          heading="Fitness Budget Stacks"
-        />
-      </div>
+        <div>
+          <Products products={popularProducts} heading="Popular Products" />
+        </div>
+        <div className="">
+          <Products products={trendingProducts} heading="Trending" />
+        </div>
+        <div className="">
+          <Products
+            products={fitnessBudgetStacks}
+            heading="Fitness Budget Stacks"
+          />
+        </div>
 
-      {/* info cards */}
-      <InfoCards />
+        {/* info cards */}
+        <InfoCards />
 
-      {/* products slider */}
-      <div>
-        <HeroSlider />
-      </div>
+        {/* products slider */}
+        <div>
+          <HeroSlider />
+        </div>
 
-      {/* subscribe to newsletter */}
-      <div className="">
-        <NewsLetter />
+        {/* subscribe to newsletter */}
+        <div className="">
+          <NewsLetter />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

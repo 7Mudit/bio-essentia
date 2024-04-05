@@ -1,6 +1,7 @@
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import NewNavbar from "@/components/shared/NewNavbar";
+import ConstructionBanner from "@/components/Banner";
 
 export default function Layout({
   children,
@@ -9,6 +10,7 @@ export default function Layout({
 }>) {
   return (
     <main>
+      <ConstructionBanner />
       <NewNavbar />
       {children}
       <Footer />

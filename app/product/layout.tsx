@@ -1,5 +1,6 @@
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import NewNavbar from "@/components/shared/NewNavbar";
 
 export default function Layout({
   children,
@@ -8,7 +9,7 @@ export default function Layout({
 }>) {
   return (
     <main>
-      <Navbar />
+      <NewNavbar />
       {children}
       <Footer />
     </main>

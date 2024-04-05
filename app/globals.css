@@ -106,7 +106,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: white;
   /* Color of the tracking area */
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 ::-ms-scrollbar-track {
-  background: #f1f1f1;
+  background: white;
   /* Color of the tracking area */
 }
 
@@ -139,6 +139,6 @@ body {
 * {
   scrollbar-width: thin;
   /* "auto" or "thin" */
-  scrollbar-color: #000000 #f1f1f1;
+  scrollbar-color: #000000 white;
   /* thumb and track color */
 }

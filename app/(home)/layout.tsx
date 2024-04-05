@@ -11,9 +11,9 @@ export default function Layout({
   return (
     <main>
       <ConstructionBanner />
-      <NewNavbar />
-      {children}
-      <Footer />
+      {/* <NewNavbar /> */}
+      {/* {children} */}
+      {/* <Footer /> */}
     </main>
   );
 }
